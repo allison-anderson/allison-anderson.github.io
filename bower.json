@@ -1,0 +1,22 @@
+{
+  "name": "Allison Anderson Portfolio",
+  "homepage": "allisonandersonsoprano.com",
+  "authors": [
+    "Derek Brown <derek@allderek.com>"
+  ],
+  "description": "Personal Website for Allison Anderson",
+  "main": "index.html",
+  "license": "Copyright",
+  "private": true,
+  "componentsDirectory": "lib/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "uikit": "^2.27.2"
+  }
+}

@@ -1,0 +1,306 @@
+/**
+  Allison's Personal Website
+  @author: Derek Brown, Reagan Henke
+  Copyright 2017; All Rights Reserved
+**/
+
+/** VARIABLES **/
+$accent-color: #c0392b;
+
+/** BODY **/
+html, body{
+  margin:0;
+
+  background: url('../img/bg.png') #212121;
+  background-repeat: repeat;
+}
+
+/** HEADINGS **/
+h1{
+  color: #030303;
+  font-size: 4em;
+  font-family: 'Damion', cursive;
+}
+
+h2{
+  font-size: 1.2em;
+  font-family: 'Raleway', serif;
+}
+
+/** IMAGE DIVIDERS **/
+.divider{
+  height: 50vh;
+  max-height:450px;
+  width: 100%;
+
+  margin-top:100px;
+  margin-bottom:100px;
+
+
+  &#div1{
+    background:url('../img/dividers/1.jpg');
+  }
+  &#div2{
+    background:url('../img/dividers/2.jpg');
+  }
+  &#div3{
+    background:url('../img/dividers/3.jpg');
+  }
+  &#div4{
+    background:url('../img/dividers/4.jpg');
+  }
+}
+
+/** SECTIONS **/
+section{
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto;
+  & > h1, & > h2{
+    color: #fff;
+
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+}
+
+/** CARD **/
+section#intro-card{
+
+  .headshot{
+    width: 200px;
+    height: 200px;
+
+    position: relative;
+    bottom: -100px;
+    z-index: 20;
+    margin:0 auto;
+
+    border-radius: 50%;
+
+    background-image:url('../img/headshot.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .body{
+    position: relative;
+    width: 100%;
+
+    z-index:10;
+
+    & > div{
+      height: 100%;
+      position: relative;
+      z-index:20;
+
+      box-sizing: border-box;
+      padding: 20px;
+      padding-top:120px;
+
+      background-color: #f7f7f7;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+
+      text-align: center;
+
+      hr{
+        margin:30px auto 0px auto;
+        border-top: 3px double #ccc;
+      }
+
+      div.subtitle{
+        @extend h2;
+        display: inline-block;
+        height:36px;
+
+        background-color:$accent-color;
+
+        color: #fff;
+        line-height:36px;
+        vertical-align: center;
+
+        position: relative;
+        top:-20px;
+
+        &:before, &:after{
+          content: "";
+          position: absolute;
+          width: 0;
+        }
+
+        &:before{
+          margin-left: -18px;
+          border-top: 18px solid transparent;
+          border-bottom: 18px solid transparent;
+          border-right:18px solid $accent-color;
+        }
+
+        &:after{
+          border-top: 18px solid transparent;
+          border-bottom: 18px solid transparent;
+          border-left: 18px solid $accent-color;
+        }
+      }
+
+      p {
+        text-align: left;
+      }
+
+      table{
+        width: 100%;
+        padding: 10px;
+
+        thead{
+          color:$accent-color;
+        }
+
+        font-size:1.1em;
+        font-family: 'Raleway', serif;
+      }
+
+      div.social{
+        margin:40px auto 20px auto;
+
+        div {
+          a {
+            display: inline-block;
+            height: 60px;
+            width: 60px;
+            margin:0px 10px;
+
+            background-color: $accent-color;
+            border-radius:30px;
+
+            color: #fff;
+            line-height: 60px;
+            font-size: 35px;
+
+            &:hover{
+              color: $accent-color;
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+
+    &:before, &:after{
+      content: "";
+      height: 98%;
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    &:before{
+      background: #fafafa;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+      left: -5px;
+      top: 4px;
+      transform: rotate(-2.5deg);
+    }
+
+    &:after{
+      background: #f6f6f6;
+      box-shadow: 0 0 3px rgba(0,0,0,0.2);
+      right: -3px;
+      top: 1px;
+      transform: rotate(1.4deg);
+    }
+  }
+}
+
+/** EXPERIENCE **/
+section#experience{
+  margin-top: 100px;
+
+  table{
+    width: 100%;
+    padding: 10px;
+
+    color: #fff;
+    font-size:1.2em;
+    font-family: 'Raleway', serif;
+
+    overflow-x: scroll;
+
+    tr td{
+      @media (max-width: 768px) {
+        padding:5px 0px;
+      }
+    }
+  }
+}
+
+/** YOUTUBE **/
+section#youtube{
+  margin-top: 100px;
+
+  iframe{
+    border:1px solid $accent-color;
+  }
+}
+
+/** STUDIO **/
+section#studio{
+  padding:20px;
+  margin-top: 100px;
+
+  h1{
+    color:#000;
+  }
+
+  background-color:#fff;
+  -webkit-box-shadow: 3px 3px 5px 6px #222;
+  -moz-box-shadow:    3px 3px 5px 6px #222;
+  box-shadow:         3px 3px 5px 6px #222;
+
+  ul.uk-list{
+    margin-left:30px;
+
+    li span{
+      color:$accent-color;
+    }
+  }
+}
+
+/** CONTACT ME **/
+section#contact{
+  max-width: 500px;
+
+  margin-top: 180px;
+  padding: 20px;
+
+  text-align: center;
+
+  h1{
+    text-align: center;
+  }
+
+  #contact-button{
+    font-size:20px;
+    padding:20px 80px;
+
+    color:#fff;
+    background-color:#000;
+    border:1px solid $accent-color;
+
+    &:hover{
+      background-color:transparent;
+    }
+  }
+}
+
+/** FOOTER **/
+section#footer{
+  margin-top: 200px;
+  margin-bottom: 10px;
+
+  text-align:center;
+}

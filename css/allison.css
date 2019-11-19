@@ -1,0 +1,206 @@
+/**
+  Allison's Personal Website
+  @author: Derek Brown, Reagan Henke
+  Copyright 2017; All Rights Reserved
+**/
+/** VARIABLES **/
+/** BODY **/
+html, body {
+  margin: 0;
+  background: url("../img/bg.png") #212121;
+  background-repeat: repeat; }
+
+/** HEADINGS **/
+h1 {
+  color: #030303;
+  font-size: 4em;
+  font-family: 'Damion', cursive; }
+
+h2, section#intro-card .body > div div.subtitle {
+  font-size: 1.2em;
+  font-family: 'Raleway', serif; }
+
+/** IMAGE DIVIDERS **/
+.divider {
+  height: 50vh;
+  max-height: 450px;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px; }
+  .divider#div1 {
+    background: url("../img/dividers/1.jpg"); }
+  .divider#div2 {
+    background: url("../img/dividers/2.jpg"); }
+  .divider#div3 {
+    background: url("../img/dividers/3.jpg"); }
+  .divider#div4 {
+    background: url("../img/dividers/4.jpg"); }
+
+/** SECTIONS **/
+section {
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto; }
+  section > h1, section > h2, section#intro-card .body > div section > div.subtitle {
+    color: #fff; }
+    @media (max-width: 768px) {
+      section > h1, section > h2, section#intro-card .body > div section > div.subtitle {
+        text-align: center; } }
+
+/** CARD **/
+section#intro-card .headshot {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  bottom: -100px;
+  z-index: 20;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-image: url("../img/headshot.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+section#intro-card .body {
+  position: relative;
+  width: 100%;
+  z-index: 10; }
+  section#intro-card .body > div {
+    height: 100%;
+    position: relative;
+    z-index: 20;
+    box-sizing: border-box;
+    padding: 20px;
+    padding-top: 120px;
+    background-color: #f7f7f7;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    text-align: center; }
+    section#intro-card .body > div hr {
+      margin: 30px auto 0px auto;
+      border-top: 3px double #ccc; }
+    section#intro-card .body > div div.subtitle {
+      display: inline-block;
+      height: 36px;
+      background-color: #c0392b;
+      color: #fff;
+      line-height: 36px;
+      vertical-align: center;
+      position: relative;
+      top: -20px; }
+      section#intro-card .body > div div.subtitle:before, section#intro-card .body > div div.subtitle:after {
+        content: "";
+        position: absolute;
+        width: 0; }
+      section#intro-card .body > div div.subtitle:before {
+        margin-left: -18px;
+        border-top: 18px solid transparent;
+        border-bottom: 18px solid transparent;
+        border-right: 18px solid #c0392b; }
+      section#intro-card .body > div div.subtitle:after {
+        border-top: 18px solid transparent;
+        border-bottom: 18px solid transparent;
+        border-left: 18px solid #c0392b; }
+    section#intro-card .body > div p {
+      text-align: left; }
+    section#intro-card .body > div table {
+      width: 100%;
+      padding: 10px;
+      font-size: 1.1em;
+      font-family: 'Raleway', serif; }
+      section#intro-card .body > div table thead {
+        color: #c0392b; }
+    section#intro-card .body > div div.social {
+      margin: 40px auto 20px auto; }
+      section#intro-card .body > div div.social div a {
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        margin: 0px 10px;
+        background-color: #c0392b;
+        border-radius: 30px;
+        color: #fff;
+        line-height: 60px;
+        font-size: 35px; }
+        section#intro-card .body > div div.social div a:hover {
+          color: #c0392b;
+          background-color: transparent; }
+  section#intro-card .body:before, section#intro-card .body:after {
+    content: "";
+    height: 98%;
+    position: absolute;
+    width: 100%;
+    z-index: 1; }
+    @media (max-width: 768px) {
+      section#intro-card .body:before, section#intro-card .body:after {
+        display: none; } }
+  section#intro-card .body:before {
+    background: #fafafa;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    left: -5px;
+    top: 4px;
+    transform: rotate(-2.5deg); }
+  section#intro-card .body:after {
+    background: #f6f6f6;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    right: -3px;
+    top: 1px;
+    transform: rotate(1.4deg); }
+
+/** EXPERIENCE **/
+section#experience {
+  margin-top: 100px; }
+  section#experience table {
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    font-size: 1.2em;
+    font-family: 'Raleway', serif;
+    overflow-x: scroll; }
+    @media (max-width: 768px) {
+      section#experience table tr td {
+        padding: 5px 0px; } }
+
+/** YOUTUBE **/
+section#youtube {
+  margin-top: 100px; }
+  section#youtube iframe {
+    border: 1px solid #c0392b; }
+
+/** STUDIO **/
+section#studio {
+  padding: 20px;
+  margin-top: 100px;
+  background-color: #fff;
+  -webkit-box-shadow: 3px 3px 5px 6px #222;
+  -moz-box-shadow: 3px 3px 5px 6px #222;
+  box-shadow: 3px 3px 5px 6px #222; }
+  section#studio h1 {
+    color: #000; }
+  section#studio ul.uk-list {
+    margin-left: 30px; }
+    section#studio ul.uk-list li span {
+      color: #c0392b; }
+
+/** CONTACT ME **/
+section#contact {
+  max-width: 500px;
+  margin-top: 180px;
+  padding: 20px;
+  text-align: center; }
+  section#contact h1 {
+    text-align: center; }
+  section#contact #contact-button {
+    font-size: 20px;
+    padding: 20px 80px;
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #c0392b; }
+    section#contact #contact-button:hover {
+      background-color: transparent; }
+
+/** FOOTER **/
+section#footer {
+  margin-top: 200px;
+  margin-bottom: 10px;
+  text-align: center; }
+
+/*# sourceMappingURL=allison.css.map */
